@@ -26,9 +26,8 @@ jobs:
           chmod +x huffup
           ./huffup
           echo "$HOME/.huff/bin" >> $GITHUB_PATH
-
-      - name: Verify Huff installation
-        run: huffc --version
+          export PATH="$HOME/.huff/bin:$PATH"
+          huffc --version
 
       - name: Verify Huff files exist
         run: |
