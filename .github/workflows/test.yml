@@ -22,6 +22,8 @@ jobs:
 
       - name: Install Huff compiler
         run: |
+          mkdir -p $HOME/.huff/bin
+          mkdir -p $HOME/.huff/share/man/man1
           curl -L https://raw.githubusercontent.com/huff-language/huff-rs/main/huffup/huffup -o huffup
           chmod +x huffup
           ./huffup
