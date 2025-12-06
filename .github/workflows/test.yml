@@ -21,7 +21,15 @@ jobs:
         uses: foundry-rs/foundry-toolchain@v1
 
       - name: Install Huff compiler
-        run: curl -L https://github.com/huff-language/huffc/releases/latest/download/huffc-x86_64-unknown-linux-gnu -o /usr/local/bin/huffc && chmod +x /usr/local/bin/huffc
+        run: |
+          sudo curl -L https://github.com/huff-language/huffc/releases/latest/download/huffc-x86_64-unknown-linux-gnu -o /usr/local/bin/huffc
+          sudo chmod +x /usr/local/bin/huffc
+          huffc --version
+
+      - name: Verify Huff files exist
+        run: |
+          ls -la src/HorseStoreV2/
+          ls -la src/horseStoreV1/
 
       - name: Show Forge version
         run: |
