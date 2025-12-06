@@ -22,9 +22,13 @@ jobs:
 
       - name: Install Huff compiler
         run: |
-          sudo curl -L https://github.com/huff-language/huffc/releases/latest/download/huffc -o /usr/local/bin/huffc
-          sudo chmod +x /usr/local/bin/huffc
-          huffc --version
+          curl -L https://raw.githubusercontent.com/huff-language/huff-rs/main/huffup/huffup -o huffup
+          chmod +x huffup
+          ./huffup
+          echo "$HOME/.huff/bin" >> $GITHUB_PATH
+
+      - name: Verify Huff installation
+        run: huffc --version
 
       - name: Verify Huff files exist
         run: |
