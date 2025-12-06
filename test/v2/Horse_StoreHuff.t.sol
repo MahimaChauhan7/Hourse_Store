@@ -7,9 +7,8 @@ import {HorseStore} from "../../src/HorseStoreV2/HorseStoreV2.sol";
 
 contract HorseStoreHuffV2Test is Base_TestV2 {
     function setUp() public override {
-        horseStore = HorseStore(
-            HuffDeployer.config().with_args(bytes.concat(abi.encode(""))).deploy("HorseStoreV2/HorseStore")
-        );
+        horseStore =
+            HorseStore(HuffDeployer.config().with_args(bytes.concat(abi.encode(""))).deploy("HorseStoreV2/HorseStore"));
     }
 
     // Override testMintHorse - Huff implementation doesn't fully implement ERC721 balanceOf
