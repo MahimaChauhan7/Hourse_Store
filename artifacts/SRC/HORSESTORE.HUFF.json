@@ -1,0 +1,18 @@
+{
+  "file": {
+    "path": "src/HorseStore.huff",
+    "source": "// send calldata --> function dispatch --> function \n// lets see how function dispatching is coded is Huff. \n#define macro MAIN() = takes(0) returns(0) {}\n",
+    "access": null,
+    "dependencies": []
+  },
+  "bytecode": "60008060093d393df3",
+  "runtime": "",
+  "abi": {
+    "constructor": null,
+    "functions": {},
+    "events": {},
+    "errors": {},
+    "receive": false,
+    "fallback": false
+  }
+}
