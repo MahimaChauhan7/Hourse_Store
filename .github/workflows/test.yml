@@ -22,7 +22,7 @@ jobs:
 
       - name: Install Huff compiler
         run: |
-          sudo curl -L https://github.com/huff-language/huffc/releases/latest/download/huffc-x86_64-unknown-linux-gnu -o /usr/local/bin/huffc
+          sudo curl -L https://github.com/huff-language/huffc/releases/latest/download/huffc -o /usr/local/bin/huffc
           sudo chmod +x /usr/local/bin/huffc
           huffc --version
 
